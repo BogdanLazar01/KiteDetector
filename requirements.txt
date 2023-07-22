@@ -1,4 +1,4 @@
-﻿aiofiles==23.1.0
+aiofiles==23.1.0
 altair==5.0.1
 anyio==3.7.0
 argcomplete==3.1.1
@@ -98,6 +98,7 @@ pyrsistent==0.19.3
 python-dateutil==2.8.2
 pytz==2023.3
 pytz-deprecation-shim==0.1.0.post0
+PyVirtualDisplay==3.0
 PyWavelets==1.4.1
 PyYAML==6.0
 pyzstd==0.15.9
