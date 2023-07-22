@@ -6,7 +6,6 @@ import cv2
 import os
 from PIL import Image
 from ultralytics import YOLO
-from pyvirtualdisplay import Display
 
 def process_video(input_path, output_path, delay):
     model = YOLO('./best.torchscript')
@@ -60,7 +59,7 @@ def process_video(input_path, output_path, delay):
     out.release()
 
     st.text("YoloV8 detection completed successfully.")
-
+    pass
 
 def main():
     st.title("Kite Detection App")
@@ -79,15 +78,11 @@ def main():
 
         delay = 100
 
-        # Use pyvirtualdisplay to set up a virtual display
-        display = Display(visible=0, size=(1, 1))
-        display.start()
-
+        # Use cv2.setHeadless() to enable headless mode
+        cv2.setHeadless()
+        
         # Process the video and generate output
         process_video(video_path, output_path, delay)
-
-        # Close the virtual display
-        display.stop()
 
         # Provide download link for the output video file
         st.markdown(get_download_link(output_path, 'Download output video'), unsafe_allow_html=True)
