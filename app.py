@@ -61,6 +61,38 @@ def process_video(input_path, output_path, delay):
     st.text("YoloV8 detection completed successfully.")
     pass
 
+#def main():
+ #   st.title("Kite Detection App")
+
+    # Upload video file
+ #   uploaded_file = st.file_uploader("Upload a video file", type=["mp4"])
+
+  #  if uploaded_file is not None:
+        # Save the uploaded file to a temporary location
+   #     temp_file = tempfile.NamedTemporaryFile(delete=False)
+    #    temp_file.write(uploaded_file.read())
+
+        # Get the file paths
+     #   video_path = temp_file.name
+    #    output_path = "output.mp4"
+
+   #     delay = 100
+
+        # Use cv2.setHeadless() to enable headless mode
+  #      cv2.setHeadless()
+        
+        # Process the video and generate output
+ #       process_video(video_path, output_path, delay)
+
+        # Provide download link for the output video file
+#        st.markdown(get_download_link(output_path, 'Download output video'), unsafe_allow_html=True)
+
+#     # Close and remove the temporary file
+#      temp_file.close()
+#       os.remove(temp_file.name)
+
+#    st.write("Upload a video file to get started!")
+
 def main():
     st.title("Kite Detection App")
 
@@ -78,9 +110,6 @@ def main():
 
         delay = 100
 
-        # Use cv2.setHeadless() to enable headless mode
-        cv2.setHeadless()
-        
         # Process the video and generate output
         process_video(video_path, output_path, delay)
 
@@ -92,7 +121,6 @@ def main():
         os.remove(temp_file.name)
 
     st.write("Upload a video file to get started!")
-
 
 def get_download_link(file_path, text):
     with open(file_path, 'rb') as f:
